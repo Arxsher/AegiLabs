@@ -20,6 +20,7 @@ import Slide18 from './components/Slide18'
 import Slide19 from './components/Slide19'
 import Slide20 from './components/Slide20'
 import Pagination from './components/Pagination'
+import MobileGate from './components/MobileGate'
 import './index.css'
 
 const TOTAL_SLIDES = 20;
@@ -42,31 +43,34 @@ function App() {
 
   return (
     <div className="App">
-      {activeSlide === 1 && <Slide1 />}
-      {activeSlide === 2 && <Slide5 />}
-      {activeSlide === 3 && <Slide3 />}
-      {activeSlide === 4 && <Slide2 />}
-      {activeSlide === 5 && <Slide6 />}
-      {activeSlide === 6 && <Slide7 />}
-      {activeSlide === 7 && <Slide8 />}
-      {activeSlide === 8 && <Slide4 />}
-      {activeSlide === 9 && <Slide9 />}
-      {activeSlide === 10 && <Slide10 />}
-      {activeSlide === 11 && <Slide11 />}
-      {activeSlide === 12 && <Slide12 />}
-      {activeSlide === 13 && <Slide13 />}
-      {activeSlide === 14 && <Slide14 />}
-      {activeSlide === 15 && <Slide15 />}
-      {activeSlide === 16 && <Slide16 />}
-      {activeSlide === 17 && <Slide17 />}
-      {activeSlide === 18 && <Slide18 />}
-      {activeSlide === 19 && <Slide19 />}
-      {activeSlide === 20 && <Slide20 />}
-      <Pagination
-        activeSlide={activeSlide}
-        totalSlides={TOTAL_SLIDES}
-        onPageClick={(num) => setActiveSlide(num)}
-      />
+      <MobileGate />
+      <div className="presentation-shell">
+        {activeSlide === 1 && <Slide1 />}
+        {activeSlide === 2 && <Slide5 />}
+        {activeSlide === 3 && <Slide3 />}
+        {activeSlide === 4 && <Slide2 />}
+        {activeSlide === 5 && <Slide6 />}
+        {activeSlide === 6 && <Slide7 />}
+        {activeSlide === 7 && <Slide8 />}
+        {activeSlide === 8 && <Slide4 />}
+        {activeSlide === 9 && <Slide9 />}
+        {activeSlide === 10 && <Slide10 />}
+        {activeSlide === 11 && <Slide11 />}
+        {activeSlide === 12 && <Slide12 />}
+        {activeSlide === 13 && <Slide13 />}
+        {activeSlide === 14 && <Slide14 />}
+        {activeSlide === 15 && <Slide15 />}
+        {activeSlide === 16 && <Slide16 />}
+        {activeSlide === 17 && <Slide17 />}
+        {activeSlide === 18 && <Slide18 />}
+        {activeSlide === 19 && <Slide19 />}
+        {activeSlide === 20 && <Slide20 />}
+        <Pagination
+          activeSlide={activeSlide}
+          totalSlides={TOTAL_SLIDES}
+          onPageClick={(num) => setActiveSlide(num)}
+        />
+      </div>
     </div>
   )
 }
