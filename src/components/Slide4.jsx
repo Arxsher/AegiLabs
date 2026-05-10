@@ -1,81 +1,63 @@
-import React from 'react';
-import { Asterisk, ArrowDownLeft } from 'lucide-react';
+import React, { useState } from 'react';
+import { Bot, GitBranch, Workflow } from 'lucide-react';
 import './Slide4.css';
-const calcImg = '/calculator_era.png';
-const kaspImg = '/kasparov.png';
-const alphaImg = '/alphago.png';
-const transImg = '/transformer_2017.png';
 
-
-const timelineData = [
+const solutionSteps = [
     {
-        date: '1945–1951',
-        title: 'The Calculator Era',
-        text: 'Machines execute orders without thinking.',
-        img: calcImg
+        number: '01',
+        title: "De la Discussion à l'Action",
+        text: "Contrairement aux modèles de langage classiques qui attendent une instruction, nos agents autonomes perçoivent leur environnement, raisonnent, créent des plans et utilisent des outils externes (APIs) pour agir de manière indépendante.",
+        icon: <Bot size={28} />
     },
     {
-        date: '1997',
-        title: 'The Kasparov Moment',
-        text: "IBM's Deep Blue defeats the World Chess Champion.",
-        img: kaspImg
+        number: '02',
+        title: 'Orchestration Multi-Agents',
+        text: 'Pour les tâches complexes, nous utilisons un modèle "Orchestrateur-Travailleur" : un agent principal reçoit la mission, la divise en sous-tâches, et délègue l\'exécution à des agents spécialistes.',
+        icon: <GitBranch size={28} />
     },
     {
-        date: '2016',
-        title: 'AlphaGo',
-        text: 'AlphaGo defeats the world champion. Strategy and intuition replace calculation.',
-        img: alphaImg
-    },
-    {
-        date: '2017',
-        title: 'Attention Is All You Need',
-        text: "Google publishes 'Attention Is All You Need.' The birth of the Transformer model.",
-        img: transImg
+        number: '03',
+        title: 'Exécution "Zero-Config"',
+        text: "L'employé numérique s'intègre nativement dans vos outils existants (WhatsApp, discord, telegram...n'importe qu'elle channell) et automatise des processus entiers sans aucune intervention humaine.",
+        icon: <Workflow size={28} />
     }
 ];
 
 const Slide4 = () => {
+    const [activeStep, setActiveStep] = useState('01');
+
     return (
         <div className="slide-container">
             <div className="slide-card p-relative slide4-card">
-                {/* Header */}
                 <header className="slide4-header">
-                    <h2 className="slide4-title">The Path to AGI</h2>
-                    <ArrowDownLeft className="slide4-icon" size={32} />
+                    <p className="slide4-kicker">NOTRE SOLUTION</p>
+                    <h2 className="slide4-title">La Force de Travail "Limitless"</h2>
+                    <p className="slide4-description">
+                        Des agents autonomes capables de comprendre, orchestrer et exécuter des processus métier
+                        directement depuis les canaux que vos équipes utilisent déjà.
+                    </p>
                 </header>
 
-                {/* Timeline */}
-                <div className="timeline-container">
-                    <div className="timeline-line"></div>
-
-                    <div className="timeline-items">
-                        {timelineData.map((item, index) => (
-                            <div key={index} className="timeline-item">
-                                <div className="timeline-top">
-                                    <div className="pill-black">{item.date}</div>
-                                    <div className="pill-outline">MILESTONE</div>
-                                    <div className="timeline-dot-container">
-                                        <div className="timeline-dot"></div>
-                                    </div>
-                                </div>
-
-                                <div className="timeline-text">
-                                    <h4 className="timeline-item-title" style={{ fontSize: '1.2rem', marginBottom: '8px' }}>{item.title}</h4>
-                                    <p className="timeline-item-desc" style={{ fontSize: '0.9rem' }}>{item.text}</p>
-                                </div>
-
-                                <div className="timeline-image-container">
-                                    <img src={item.img} alt={`Timeline ${item.title}`} className="timeline-image" />
-                                </div>
+                <div className="solution-grid">
+                    {solutionSteps.map((step) => (
+                        <article
+                            className={`solution-card ${activeStep === step.number ? 'solution-card-active' : ''}`}
+                            key={step.number}
+                            onClick={() => setActiveStep(step.number)}
+                        >
+                            <div className="solution-card-top">
+                                <span>{step.number}</span>
+                                <div className="solution-card-icon">{step.icon}</div>
                             </div>
-                        ))}
-                    </div>
+                            <h3>{step.title}</h3>
+                            <p>{step.text}</p>
+                        </article>
+                    ))}
                 </div>
 
-                {/* Footer */}
                 <footer className="slide4-footer">
-                    <Asterisk className="logo-icon-small" size={24} />
-                    <span className="page-number">AI EVOLUTION</span>
+                    <span>SECTION 02 — LA SOLUTION aegiLabs</span>
+                    <span>Discussion → Orchestration → Exécution</span>
                 </footer>
             </div>
         </div>

@@ -8,24 +8,25 @@ const Slide2 = () => {
             <div className="slide-card p-relative">
                 {/* Welcome Tag */}
                 <div className="welcome-tag">
-                    <span>WELCOME</span>
+                    <span>NOTRE ÉQUIPE</span>
                 </div>
 
                 {/* Main Text Content */}
                 <main className="slide-content-v2">
                     <h2 className="lorem-title">
-                        (AGI)<br />
-                        Artificial General Intelligence <br />
-                        is not just a smarter software. <br />
-                        it is a system capable of inventing, <br />
-                        researching, and solving problems <span className="text-faded">across all domains- <br />
-                            from physics to medicine better than any human</span>
+                        (aegiLabs)<br />
+                        Spécialistes en Ingénierie Système <br />
+                        et en architecture d'Agents IA. <br />
+                        Notre mission est de démocratiser, <br />
+                        de sécuriser et d'automatiser <span className="text-faded">les entreprises- <br />
+                            avec une garantie absolue sur la <br />
+                            souveraineté locale</span>
                     </h2>
                 </main>
 
                 {/* Navigation Bottom Right */}
                 <div className="nav-bottom-right">
-                    <button className="btn-outline-v2 uppercase">GETTING TO KNOW MORE</button>
+                    <button className="btn-outline-v2 uppercase">DÉCOUVRIR NOTRE ADN</button>
                     <button className="btn-icon-v2">
                         <ArrowDownRight size={20} />
                     </button>

@@ -1,74 +1,61 @@
 import React from 'react';
 import './Slide15.css';
 
+const ecosystemCards = [
+    {
+        number: '01',
+        title: 'Concurrence',
+        scope: 'Chatbots simples, plateformes no-code, assistants IA génériques et recrutement junior.',
+        position: 'Ces alternatives automatisent une partie du besoin, mais demandent souvent configuration, suivi ou intervention interne.'
+    },
+    {
+        number: '02',
+        title: 'Positionnement',
+        scope: 'Service géré, agents opérationnels, intégration sur mesure et monitoring.',
+        position: 'aegiLabs se place comme partenaire d’exécution: l’agent est installé, suivi et amélioré selon le métier du client.'
+    },
+    {
+        number: '03',
+        title: 'Fournisseurs',
+        scope: 'Modèles IA, cloud/VPS, APIs, messageries, CRM et bases de données.',
+        position: 'La dépendance fournisseur est maîtrisée par le choix d’outils fiables, interchangeables et adaptés au budget client.'
+    }
+];
+
 const Slide15 = () => {
     return (
         <div className="slide-container">
-            <div className="slide-card slide15-card bg-light-v2 border-none">
-
-                <header className="slide15-top-meta">
-                    <span className="meta-info">Swiss International Scientific</span>
+            <div className="slide-card slide15-card p-relative">
+                <header className="s15-browser-bar">
+                    <div className="s15-left-meta">
+                        <span className="s15-mini-pill">CONCURRENCE & FOURNISSEURS</span>
+                    </div>
+                    <span className="s15-mini-pill">POSITIONNEMENT</span>
                 </header>
 
-                <main className="slide15-main-content">
-                    <h1 className="slide15-big-title">Trend 2: The Collapse of Cost</h1>
+                <main className="s15-main">
+                    <h2>
+                        Concurrence, fournisseurs: <span>où se place</span> aegiLabs ?
+                    </h2>
 
-                    <div className="cost-chart-container">
-                        <div className="chart-legend-center">Price per Million Tokens</div>
-
-                        <div className="cost-chart-area">
-                            {/* Grid Overlay */}
-                            <div className="cost-grid">
-                                {[...Array(20)].map((_, i) => (
-                                    <div key={`v-${i}`} className="grid-v-line"></div>
-                                ))}
-                                {[...Array(10)].map((_, i) => (
-                                    <div key={`h-${i}`} className="grid-h-line"></div>
-                                ))}
-                            </div>
-
-                            {/* SVG Line Chart */}
-                            <svg className="cost-svg" viewBox="0 0 1000 350" preserveAspectRatio="none">
-                                <path
-                                    d="M 50,50 Q 150,250 950,330"
-                                    fill="none"
-                                    stroke="#1a1a1a"
-                                    strokeWidth="6"
-                                    strokeLinecap="round"
-                                />
-                            </svg>
-
-                            {/* Callouts */}
-                            <div className="cost-bubble bubble-1" style={{ left: '15%', top: '10%' }}>
-                                <div className="bubble-content">
-                                    <strong>20 IQ Points Level:</strong> Dropped from <br />
-                                    $1.00 to $0.01 (100x reduction).
-                                </div>
-                                <div className="bubble-pointer-left"></div>
-                            </div>
-
-                            <div className="cost-bubble bubble-2" style={{ left: '35%', top: '45%' }}>
-                                <div className="bubble-content">
-                                    <strong>50 IQ Points Level:</strong> Dropped from <br />
-                                    $25.00 to $0.14 in one year.
-                                </div>
-                                <div className="bubble-pointer-left"></div>
-                            </div>
-
-                            <div className="cost-bubble bubble-3" style={{ right: '5%', bottom: '15%' }}>
-                                <div className="bubble-content">
-                                    <strong>Next Year:</strong> 70 IQ Points Level <br />
-                                    at fractions of a penny.
-                                </div>
-                                <div className="bubble-pointer-down"></div>
-                            </div>
+                    <section className="s15-table-wrap" aria-label="Concurrence, différenciation et fournisseurs">
+                        <div className="s15-table-head" aria-hidden="true">
+                            <span>Élément</span>
+                            <span>Détails</span>
+                            <span>Analyse</span>
                         </div>
-                    </div>
 
-                    <p className="trend-bottom-text">
-                        As intelligence explodes, the cost of production is collapsing. <br />
-                        We are entering the era of compute abundance for every worker.
-                    </p>
+                        {ecosystemCards.map((card) => (
+                            <article className="s15-table-row" key={card.title}>
+                                <div className="s15-table-label">
+                                    <span>{card.number}</span>
+                                    <strong>{card.title}</strong>
+                                </div>
+                                <p>{card.scope}</p>
+                                <p>{card.position}</p>
+                            </article>
+                        ))}
+                    </section>
                 </main>
             </div>
         </div>

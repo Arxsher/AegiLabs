@@ -1,64 +1,85 @@
 import React from 'react';
+import { Bot, BrainCircuit, Cable, DatabaseZap } from 'lucide-react';
 import './Slide9.css';
-const calcImg = '/calculator_era.png';
-const kaspImg = '/kasparov.png';
+
+const layers = [
+    {
+        name: 'Couche Interface',
+        text: 'WhatsApp, Discord, Telegram et CRM deviennent des points d\'entrée naturels.'
+    },
+    {
+        name: 'Couche Raisonnement',
+        text: 'L\'agent comprend la demande, choisit les outils et construit un plan d\'action.'
+    },
+    {
+        name: 'Entree Systeme',
+        text: 'Donnees clients, regles metier, catalogue, stock et historique alimentent le contexte.'
+    },
+    {
+        name: 'Couche Automatisation',
+        text: 'Commandes, tickets, relances, factures et mises a jour sont executes automatiquement.'
+    }
+];
 
 const Slide9 = () => {
     return (
         <div className="slide-container">
-            <div className="slide-card slide9-card">
-                {/* Top Section */}
-                <div className="slide9-section top-section">
-                    <div className="content-left">
-                        <div className="welcome-tag-v3">
-                            <span>ERA 01</span>
-                        </div>
-                        <h2 className="section-title">
-                            The Calculator <br />
-                            Era
-                        </h2>
-                        <p className="section-desc">
-                            <strong>1945–1951: Raw Mechanical Logic.</strong><br />
-                            Early computers like ENIAC were essentially giant, room-filling calculators.
-                            They lacked the ability to store programs or learn. These machines
-                            followed fixed mathematical instructions with absolute precision but zero autonomy.
-                            It was the age of raw computation, where "intelligence" was purely mechanical.
-                        </p>
-                    </div>
-                    <div className="content-right">
-                        <div className="split-image-container">
-                            <img src={calcImg} alt="Calculator Era" />
-                        </div>
-                    </div>
-                </div>
+            <div className="slide-card slide9-card p-relative">
+                <header className="s9-topbar">
+                    <span className="s9-meta-pill">SECTION 02 / LA SOLUTION</span>
+                    <span className="s9-meta-pill">ARCHITECTURE AGENTIQUE</span>
+                </header>
 
-                {/* Separator Line */}
-                <div className="section-separator"></div>
-
-                {/* Bottom Section */}
-                <div className="slide9-section bottom-section">
-                    <div className="content-left">
-                        <div className="split-image-container">
-                            <img src={kaspImg} alt="Kasparov Moment" />
-                        </div>
-                    </div>
-                    <div className="content-right content-right-text">
-                        <h2 className="section-title">
-                            The Kasparov <br />
-                            Moment
-                        </h2>
-                        <p className="section-desc">
-                            <strong>1997: Silicon Defeats Grandmaster.</strong><br />
-                            When IBM’s Deep Blue defeated Garry Kasparov, it marked a historic shift.
-                            For the first time, a machine outmaneuvered the human brain in a game
-                            defined by deep strategy. While still relying on brute-force search,
-                            it proved that specific domains of human expertise could be conquered by silicon.
+                <main className="s9-layout">
+                    <section className="s9-copy">
+                        <p className="s9-kicker">MOTEUR aegiLabs</p>
+                        <h2>LA<br />SOLUTION</h2>
+                        <p className="s9-body">
+                            Une requete client devient un processus complet: l'agent comprend,
+                            orchestre les bons outils, puis execute l'action dans vos systemes.
                         </p>
-                        <div className="welcome-tag-v3">
-                            <span>ERA 02</span>
+                        <p className="s9-note">
+                            Core expertise: agents autonomes, orchestration multi-agents, integrations API et souverainete locale.
+                        </p>
+                    </section>
+
+                    <section className="s9-exploded" aria-label="Architecture aegiLabs en couches">
+                        <div className="s9-device-layer s9-layer-top">
+                            <Bot size={34} />
                         </div>
-                    </div>
-                </div>
+                        <div className="s9-device-layer s9-layer-chip">
+                            <BrainCircuit size={30} />
+                        </div>
+                        <div className="s9-device-layer s9-layer-board">
+                            <Cable size={36} />
+                        </div>
+                        <div className="s9-pillars">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div className="s9-device-layer s9-layer-base">
+                            <DatabaseZap size={32} />
+                        </div>
+                    </section>
+
+                    <section className="s9-layers">
+                        {layers.map((layer) => (
+                            <article className="s9-layer-callout" key={layer.name}>
+                                <div className="s9-rule"></div>
+                                <div>
+                                    <h3>{layer.name}</h3>
+                                    <p>{layer.text}</p>
+                                </div>
+                            </article>
+                        ))}
+                    </section>
+                </main>
+
+                <footer className="s9-footer">
+                    <span className="s9-meta-pill">Message -&gt; Raisonnement -&gt; Execution</span>
+                </footer>
             </div>
         </div>
     );

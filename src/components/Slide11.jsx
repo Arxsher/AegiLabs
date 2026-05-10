@@ -5,32 +5,26 @@ import './Slide11.css';
 const Slide11 = () => {
     return (
         <div className="slide-container dark-theme">
-            <div className="slide-card p-relative border-none bg-dark-v3">
-                {/* Large Index Number - Top Left this time */}
-                <div className="large-index-v3">03</div>
-
-                {/* Section Badge - Bottom Right */}
-                <div className="section-badge-v3">
-                    <span>SECTION 3</span>
+            <div className="slide-card p-relative border-none slide11-card">
+                <div className="s11-section-badge">
+                    <span>SECTION 03</span>
                 </div>
 
-                {/* Main Section Title - Bottom Left */}
-                <div className="section-title-container-v3">
-                    <h2 className="section-name-v3">
-                        The Turning <br /> Point & <br /> Acceleration
-                    </h2>
-                    <button className="btn-icon-v5">
+                <div className="s11-index" aria-hidden="true">03</div>
+
+                <div className="s11-title-container">
+                    <h2 className="section-name">Analyse du<br />Projet</h2>
+                    <button className="s11-arrow" aria-label="Continuer">
                         <ArrowDownRight size={24} />
                     </button>
                 </div>
 
-                {/* Top Right Info */}
-                <div className="top-right-info-v3">
-                    <p className="branding-text">AGI PRESENTATION — SECTION 03</p>
+                <div className="s11-info">
+                    <p className="branding-text">aegiLabs — SECTION 03</p>
                     <p className="small-description">
-                        Decoding the momentum and <br />
-                        inflection points of the <br />
-                        AI revolution.
+                        Marché cible, secteurs prioritaires,<br />
+                        barrières d'adoption et avantage<br />
+                        défendable du projet.
                     </p>
                 </div>
             </div>

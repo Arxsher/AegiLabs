@@ -8,8 +8,8 @@ const Slide7 = () => {
 
                 {/* Top Branding Header */}
                 <header className="slide7-top-branding">
-                    <span className="brand-left">AGI Revolution</span>
-                    <span className="brand-center">The Phase Transition in History</span>
+                    <span className="brand-left">L'Impasse Opérationnelle</span>
+                    <span className="brand-center">L'Évolution du Goulot d'Étranglement</span>
                 </header>
 
                 {/* Main Content Area */}
@@ -18,14 +18,14 @@ const Slide7 = () => {
                     {/* Left Text Column */}
                     <div className="slide7-text-col">
                         <h2 className="slide7-main-title">
-                            Why<br />
-                            The AGI<br />
-                            actually wins
+                            Le<br />
+                            Problème<br />
+                            Aujourd'hui
                         </h2>
                         <p className="slide7-description">
-                            Understanding why AGI <br />
-                            is fundamentally different from all <br />
-                            previous technological revolutions.
+                            Comprendre pourquoi les PME <br />
+                            sont paralysées malgré l'accès à <br />
+                            tous les outils digitaux modernes.
                         </p>
                     </div>
 
@@ -35,27 +35,27 @@ const Slide7 = () => {
                         {/* Bar 1: Information (Min: 50) */}
                         <div className="chart-bar bar-1">
                             <div className="bar-content">
-                                <h3 className="bar-value">+50y</h3>
-                                <p className="bar-label">Information Revolution</p>
-                                <p className="bar-sub-desc">Accelerated data processing and communication</p>
+                                <h3 className="bar-value">Aujourd'hui</h3>
+                                <p className="bar-label">Le Chaos des Messageries</p>
+                                <p className="bar-sub-desc">Surcharge WhatsApp, copier-coller et erreurs de saisie.</p>
                             </div>
                         </div>
 
                         {/* Bar 2: Industrial (Medium: 250) */}
                         <div className="chart-bar bar-2">
                             <div className="bar-content">
-                                <h3 className="bar-value">+250y</h3>
-                                <p className="bar-label">Industrial Revolution</p>
-                                <p className="bar-sub-desc">Amplified human physical labor through machines</p>
+                                <h3 className="bar-value">Années 2010</h3>
+                                <p className="bar-label">L'Échec des Chatbots</p>
+                                <p className="bar-sub-desc">Outils rigides créant de la frustration chez les clients.</p>
                             </div>
                         </div>
 
                         {/* Bar 3: Agricultural (Highest: 10k) */}
                         <div className="chart-bar bar-3">
                             <div className="bar-content">
-                                <h3 className="bar-value">+10k</h3>
-                                <p className="bar-label">Agricultural Revolution</p>
-                                <p className="bar-sub-desc">Transformed how humans obtained food</p>
+                                <h3 className="bar-value">Années 2000</h3>
+                                <p className="bar-label">Les Logiciels Isolés</p>
+                                <p className="bar-sub-desc">Logiciels nécessitant une gestion humaine constante.</p>
                             </div>
                         </div>
 
@@ -64,7 +64,7 @@ const Slide7 = () => {
 
                 {/* Copyright Footer */}
                 <footer className="slide7-footer">
-                    <span className="copyright-text">AGI REVOLUTION — THE PHASE TRANSITION</span>
+                    <span className="copyright-text">SECTION 01 — LE GOULOT D'ÉTRANGLEMENT MANUEL</span>
                 </footer>
 
             </div>

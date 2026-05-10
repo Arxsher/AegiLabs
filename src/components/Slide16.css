@@ -1,76 +1,72 @@
-.bg-dark-v4 {
-    background-color: #0a0a0a !important;
+.slide16-card {
+    background-color: #0e0e0e !important;
     color: #ffffff;
 }
 
-.large-index-v4 {
+.s16-section-badge {
     position: absolute;
-    top: 5%;
-    right: 4%;
-    font-size: clamp(10rem, 25vw, 25rem);
-    font-weight: 500;
-    color: #1a1a1a;
-    line-height: 1;
-    letter-spacing: -0.05em;
-    z-index: 1;
-}
-
-.section-badge-v4 {
-    position: absolute;
-    top: 10%;
+    top: 8%;
     left: 6%;
-    z-index: 2;
 }
 
-.section-badge-v4 span {
+.s16-section-badge span {
     font-size: 0.75rem;
     font-weight: 600;
     color: #1a1a1a;
     letter-spacing: 0.05em;
-    background-color: #ffffff;
+    background-color: #e8e8e8;
     padding: 8px 24px;
     border-radius: 30px;
 }
 
-.section-title-container-v4 {
+.s16-index {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: clamp(10rem, 25vw, 25rem);
+    font-weight: 500;
+    color: #333;
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+.s16-title-container {
     position: absolute;
     bottom: 10%;
     left: 6%;
     display: flex;
-    flex-direction: row;
     align-items: flex-end;
     gap: 24px;
-    text-align: left;
-    z-index: 2;
 }
 
-.section-name-v4 {
-    font-size: clamp(3rem, 7vw, 7rem);
-    font-weight: 600;
-    letter-spacing: -0.04em;
-    color: #ffffff;
-    line-height: 0.95;
-    margin: 0;
-}
-
-.btn-icon-v6 {
+.s16-arrow {
+    width: 64px;
+    height: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background: #ffffff;
-    border: none;
-    color: #1a1a1a;
-    cursor: pointer;
     margin-bottom: 20px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid #444;
+    color: #ffffff;
+    cursor: pointer;
 }
 
-.bottom-right-info-v4 {
+.s16-info {
     position: absolute;
-    bottom: 10%;
     right: 6%;
+    bottom: 10%;
     text-align: right;
-    z-index: 2;
+}
+
+@media (max-width: 900px) {
+    .s16-title-container {
+        right: 6%;
+        flex-wrap: wrap;
+    }
+
+    .s16-info {
+        display: none;
+    }
 }

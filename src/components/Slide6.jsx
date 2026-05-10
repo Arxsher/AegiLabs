@@ -1,97 +1,59 @@
-import React from 'react';
-import { Bot, BrainCircuit, CheckCircle2, Star, AlertTriangle, Lightbulb } from 'lucide-react';
+import React, { useState } from 'react';
+import { AlertCircle, Banknote, LockKeyhole } from 'lucide-react';
 import './Slide6.css';
 
+const analysisPoints = [
+    {
+        number: '01',
+        title: "Le Goulot d'Étranglement Manuel",
+        icon: <AlertCircle size={28} />,
+        text: 'La gestion des clients sur WhatsApp (copier-coller, confirmation Cash on Delivery) est 100% manuelle. Elle limite la croissance, crée des erreurs et épuise les équipes.'
+    },
+    {
+        number: '02',
+        title: "L'Hémorragie Financière",
+        icon: <Banknote size={28} />,
+        text: 'Embaucher du personnel pour effectuer des tâches répétitives et du support client 24h/24 génère des coûts salariaux insoutenables pour les PME et les agences.'
+    },
+    {
+        number: '03',
+        title: 'Le Mur Technologique & Sécuritaire',
+        icon: <LockKeyhole size={28} />,
+        text: "Les entreprises veulent automatiser avec l'IA, mais sont bloquées par la complexité technique et refusent de confier leurs données sensibles à des applications non sécurisées."
+    }
+];
+
 const Slide6 = () => {
+    const [activePoint, setActivePoint] = useState('01');
+
     return (
         <div className="slide-container">
             <div className="slide-card slide6-card p-relative">
+                <div className="slide6-kicker">LE CONSTAT</div>
 
-                {/* Header */}
                 <header className="slide6-header">
-                    <h2 className="slide6-title">
-                        <span className="text-dark">What is AGI?</span> <span className="text-grey">Breaking Down the Basics</span>
-                    </h2>
-                    <p className="slide6-subtitle">Understanding the difference between the AI we use today and the AI of tomorrow</p>
+                    <h2 className="slide6-title">Les Grands Défis du Marché</h2>
+                    <p className="slide6-description">
+                        Avant d'automatiser, il faut comprendre les frictions qui ralentissent les équipes,
+                        gonflent les coûts et bloquent l'adoption de l'IA.
+                    </p>
                 </header>
 
-                {/* Comparison Layout */}
-                <div className="comparison-grid">
-
-                    {/* Card 1: ANI */}
-                    <div className="comparison-card ani-card">
-                        <div className="card-header">
-                            <div className="icon-circle">
-                                <Bot size={28} className="icon-dark" />
+                <div className="analysis-grid">
+                    {analysisPoints.map((point) => (
+                        <article
+                            className={`analysis-card ${activePoint === point.number ? 'analysis-card-active' : ''}`}
+                            key={point.number}
+                            onClick={() => setActivePoint(point.number)}
+                        >
+                            <div className="analysis-card-top">
+                                <span className="analysis-number">{point.number}</span>
+                                <div className="analysis-icon">{point.icon}</div>
                             </div>
-                            <h3 className="card-title">ANI: Narrow AI</h3>
-                        </div>
-
-                        <p className="card-desc"><strong>Artificial Narrow Intelligence</strong> - The AI we use every day</p>
-
-                        <ul className="feature-list">
-                            <li>
-                                <CheckCircle2 size={20} className="list-icon" />
-                                <div className="list-text">
-                                    <span className="list-title">Siri, Alexa, ChatGPT</span>
-                                    <span className="list-sub">Voice assistants and chatbots</span>
-                                </div>
-                            </li>
-                            <li>
-                                <CheckCircle2 size={20} className="list-icon" />
-                                <div className="list-text">
-                                    <span className="list-title">Netflix & Spotify recommendations</span>
-                                    <span className="list-sub">Personalized content suggestions</span>
-                                </div>
-                            </li>
-                            <li>
-                                <CheckCircle2 size={20} className="list-icon" />
-                                <div className="list-text">
-                                    <span className="list-title">Chess & Go champions</span>
-                                    <span className="list-sub">Game-playing AI systems</span>
-                                </div>
-                            </li>
-                        </ul>
-
-                    </div>
-
-                    {/* Card 2: AGI */}
-                    <div className="comparison-card agi-card">
-                        <div className="card-header">
-                            <div className="icon-circle icon-dark-bg">
-                                <BrainCircuit size={28} className="icon-light" />
-                            </div>
-                            <h3 className="card-title">AGI: General AI</h3>
-                        </div>
-
-                        <p className="card-desc"><strong>Artificial General Intelligence</strong> - Human-level cognitive abilities</p>
-
-                        <ul className="feature-list">
-                            <li>
-                                <Star size={20} className="list-icon-dark" />
-                                <div className="list-text">
-                                    <span className="list-title">Cross-domain intelligence</span>
-                                    <span className="list-sub">Apply chess strategy to business negotiations</span>
-                                </div>
-                            </li>
-                            <li>
-                                <Star size={20} className="list-icon-dark" />
-                                <div className="list-text">
-                                    <span className="list-title">Autonomous learning</span>
-                                    <span className="list-sub">Learn new skills without explicit programming</span>
-                                </div>
-                            </li>
-                            <li>
-                                <Star size={20} className="list-icon-dark" />
-                                <div className="list-text">
-                                    <span className="list-title">Conceptual understanding</span>
-                                    <span className="list-sub">Grasp WHY things matter, not just patterns</span>
-                                </div>
-                            </li>
-                        </ul>
-
-                    </div>
-
+                            <h3>{point.title}</h3>
+                            <p>{point.text}</p>
+                        </article>
+                    ))}
                 </div>
             </div>
         </div>

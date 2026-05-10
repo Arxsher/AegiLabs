@@ -107,7 +107,7 @@
 }
 
 .bar-value {
-    font-size: clamp(2rem, 3.5vw, 3.5rem);
+    font-size: clamp(1.75rem, 2.6vw, 3rem);
     font-weight: 500;
     color: #ffffff;
     margin: 0;
@@ -116,7 +116,7 @@
 }
 
 .bar-label {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #ffffff;
     margin: 0;
@@ -124,7 +124,7 @@
 }
 
 .bar-sub-desc {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: #a0a0a0;
     margin: 0;
     line-height: 1.4;

@@ -1,34 +1,36 @@
 import React from 'react';
-import { ArrowDownRight } from 'lucide-react';
+import { ArrowDownRight, Asterisk } from 'lucide-react';
 import './Slide20.css';
 
 const Slide20 = () => {
     return (
-        <div className="slide-container">
-            <div className="slide-card s20-card p-relative">
-                {/* Welcome Tag */}
-                <div className="s20-tag">
-                    <span>THE END OF THE BEGINNING</span>
-                </div>
+        <div className="slide-container dark-theme">
+            <div className="slide-card slide20-card border-none p-relative">
+                <header className="s20-header">
+                    <div className="s20-brand">
+                        <Asterisk size={24} />
+                        <span>aegiLabs</span>
+                    </div>
+                    <span className="s20-pill">CONCLUSION</span>
+                </header>
 
-                {/* Main Text Content */}
                 <main className="s20-content">
-                    <h2 className="s20-title">
-                        if we succeed, <br />
-                        it will be the last invention <br />
-                        humanity will ever need to make. <br />
-                        solving Cancer, <span className="s20-faded">Solving energy, <br />Solving economics... <br />
-                            <span className="s20-glow-red">the future is not linear. it's exponential.</span></span>
+                    <p>Vision finale</p>
+                    <h2>
+                        Le futur du travail ne remplace pas l'humain. Il lui donne un <strong className="s20-red-word">aegiLabs</strong> agent à diriger.
                     </h2>
+                    <span>
+                        aegiLabs la rend opérationnelle aujourd'hui: des agents qui exécutent,
+                        s'intègrent aux outils existants et restent sous contrôle humain.
+                    </span>
                 </main>
 
-                {/* Navigation Bottom Right */}
-                <div className="s20-nav">
-                    <button className="s20-btn-outline">THANKS FOR YOUR ATTENTION</button>
-                    <button className="s20-btn-icon">
+                <footer className="s20-footer">
+                    <button className="s20-cta">MERCI POUR VOTRE ATTENTION</button>
+                    <button className="s20-icon" aria-label="Fin">
                         <ArrowDownRight size={20} />
                     </button>
-                </div>
+                </footer>
             </div>
         </div>
     );

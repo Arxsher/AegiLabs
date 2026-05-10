@@ -5,32 +5,26 @@ import './Slide16.css';
 const Slide16 = () => {
     return (
         <div className="slide-container dark-theme">
-            <div className="slide-card p-relative border-none bg-dark-v4">
-                {/* Large Index Number - Top Right */}
-                <div className="large-index-v4">04</div>
-
-                {/* Section Badge - Top Left */}
-                <div className="section-badge-v4">
-                    <span>SECTION 4</span>
+            <div className="slide-card p-relative border-none slide16-card">
+                <div className="s16-section-badge">
+                    <span>SECTION 04</span>
                 </div>
 
-                {/* Main Section Title - Bottom Left */}
-                <div className="section-title-container-v4">
-                    <h2 className="section-name-v4">
-                        The Arrival of <br /> True AGI
-                    </h2>
-                    <button className="btn-icon-v6">
+                <div className="s16-index" aria-hidden="true">04</div>
+
+                <div className="s16-title-container">
+                    <h2 className="section-name">Le Modèle<br />Economique</h2>
+                    <button className="s16-arrow" aria-label="Continuer">
                         <ArrowDownRight size={24} />
                     </button>
                 </div>
 
-                {/* Bottom Right Info */}
-                <div className="bottom-right-info-v4">
-                    <p className="branding-text">AGI PRESENTATION — SECTION 04</p>
+                <div className="s16-info">
+                    <p className="branding-text">aegiLabs — SECTION 04</p>
                     <p className="small-description">
-                        The final phase transition: <br />
-                        when artificial intelligence <br />
-                        surpasses human capability.
+                        Frais d'intégration,<br />
+                        abonnement mensuel<br />
+                        et extension par usage.
                     </p>
                 </div>
             </div>

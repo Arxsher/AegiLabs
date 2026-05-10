@@ -1,90 +1,73 @@
-.bg-dark-v3 {
-    background-color: #080808 !important;
-    /* Deepest dark for Section 3 */
+.slide11-card {
+    background-color: #121212 !important;
     color: #ffffff;
 }
 
-.large-index-v3 {
+.s11-section-badge {
     position: absolute;
-    top: 5%;
-    left: 4%;
-    font-size: clamp(10rem, 25vw, 25rem);
-    font-weight: 500;
-    color: #333;
-    /* More visible grey index */
-    line-height: 1;
-    letter-spacing: -0.05em;
+    top: 8%;
+    left: 6%;
 }
 
-.section-badge-v3 {
-    position: absolute;
-    bottom: 8%;
-    right: 6%;
-}
-
-.section-badge-v3 span {
+.s11-section-badge span {
     font-size: 0.75rem;
     font-weight: 600;
     color: #1a1a1a;
     letter-spacing: 0.05em;
-    background-color: #ffffff;
+    background-color: #e8e8e8;
     padding: 8px 24px;
     border-radius: 30px;
 }
 
-.section-title-container-v3 {
+.s11-index {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: clamp(10rem, 25vw, 25rem);
+    font-weight: 500;
+    color: #e8e8e8;
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+.s11-title-container {
     position: absolute;
     bottom: 10%;
-    right: 6%;
+    left: 6%;
     display: flex;
-    flex-direction: row-reverse;
     align-items: flex-end;
     gap: 24px;
-    text-align: right;
 }
 
-.section-name-v3 {
-    font-size: clamp(3rem, 7vw, 7rem);
-    font-weight: 600;
-    letter-spacing: -0.04em;
-    color: #ffffff;
-    line-height: 0.95;
-    margin: 0;
-}
-
-.btn-icon-v5 {
+.s11-arrow {
+    width: 64px;
+    height: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 64px;
-    height: 64px;
+    margin-bottom: 20px;
     border-radius: 50%;
     background: transparent;
-    border: 1px solid #333;
+    border: 1px solid #444;
     color: #ffffff;
     cursor: pointer;
-    margin-bottom: 20px;
 }
 
-.top-right-info-v3 {
+.s11-info {
     position: absolute;
-    top: 10%;
     right: 6%;
+    bottom: 10%;
+    width: min(24%, 300px);
     text-align: right;
 }
 
-.branding-text {
-    font-size: 0.55rem;
-    font-weight: 700;
-    color: #666;
-    letter-spacing: 0.1em;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-}
+@media (max-width: 900px) {
+    .s11-title-container {
+        right: 6%;
+        flex-wrap: wrap;
+    }
 
-.small-description {
-    font-size: clamp(0.9rem, 1.2vw, 1.4rem);
-    color: #8c8c8c;
-    line-height: 1.4;
-    margin: 0;
+    .s11-info {
+        display: none;
+    }
 }

@@ -5,32 +5,32 @@ import './Slide5.css';
 const agendaItems = [
     {
         num: '01',
-        title: 'Introduction to AGI',
-        desc: 'What is AGI? Understanding the difference between narrow AI and true general intelligence.',
+        title: "L'Accroche & Le Problème",
+        desc: "Le goulot d'étranglement manuel sur WhatsApp et les coûts de l'inefficacité opérationnelle.",
         icon: <Flag size={28} className="bento-icon" />
     },
     {
         num: '02',
-        title: 'The AI Evolution',
-        desc: 'From calculators to transformers: the key milestones that paved the road to AGI.',
+        title: 'La Solution aegiLabs',
+        desc: 'De simples chatbots aux Agents IA autonomes : présentation de notre main-d\'oeuvre "Limitless" capable d\'exécuter des processus entiers.',
         icon: <Milestone size={28} className="bento-icon" />
     },
     {
         num: '03',
-        title: 'The Turning Point',
-        desc: 'The attention mechanism, expanding intelligence, collapsing costs, and IQ benchmarks.',
+        title: 'Analyse du Projet (Macro & Micro)',
+        desc: "Secteurs, barrières technologiques, cybersécurité et l'importance de la souveraineté numérique.",
         icon: <TrendingUp size={28} className="bento-icon" />
     },
     {
         num: '04',
-        title: 'The Arrival of True AGI',
-        desc: 'The final phase transition: when artificial intelligence surpasses human capability.',
+        title: 'Le Modèle Économique',
+        desc: "Notre stratégie B2B/B2C, les frais d'intégration et les abonnements mensuels récurrents.",
         icon: <Brain size={28} className="bento-icon" />
     },
     {
         num: '05',
-        title: 'The End of the Beginning',
-        desc: 'If we succeed, it will be the last invention humanity will ever need to make.',
+        title: 'Conclusion & Vision',
+        desc: "Financer et propulser l'automatisation sécurisée de l'économie marocaine.",
         icon: <Sparkles size={28} className="bento-icon" />
     }
 ];
@@ -40,8 +40,8 @@ const Slide5 = () => {
         <div className="slide-container">
             <div className="slide-card slide5-card">
                 <header className="slide5-header">
-                    <h2 className="slide5-title">Agenda Overview</h2>
-                    <p className="slide5-subtitle">Our Journey Through the AGI Revolution</p>
+                    <h2 className="slide5-title">Sommaire</h2>
+                    <p className="slide5-subtitle">Le Déploiement de la Force de Travail Numérique</p>
                 </header>
 
                 <div className="bento-grid">

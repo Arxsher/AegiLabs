@@ -1,60 +1,42 @@
 import React from 'react';
-import { ArrowUpRight, MapPin } from 'lucide-react';
+import { Rocket, ShieldCheck } from 'lucide-react';
 import './Slide19.css';
 
 const Slide19 = () => {
     return (
         <div className="slide-container">
             <div className="slide-card slide19-card p-relative">
+                <div className="s19-top-left">SECTION 05</div>
+                <div className="s19-branding">aegiLabs — CONCLUSION & VISION</div>
 
-                {/* Top Right Branding */}
-                <div className="slide19-branding">
-                    <span>THE 2027 HORIZON — AGI TIMELINE</span>
-                </div>
+                <main className="s19-layout">
+                    <section className="s19-left">
+                        <h2>
+                            Automatiser <span>les entreprises</span><br />
+                            sans perdre le contrôle<br />
+                            des données, des équipes<br />
+                            et des processus.
+                        </h2>
+                    </section>
 
-                {/* Main Two-Column Layout */}
-                <div className="slide19-layout">
-
-                    {/* Left: Big Typography brutalist layout */}
-                    <div className="slide19-left">
-                        <h1 className="slide19-big-text">
-                            Leading AI researchers <span className="text-light-grey">and</span><br />
-                            <span className="text-light-grey">industry experts globally</span><br />
-                            predict the <span className="text-dark">arrival</span> of<br />
-                            Artificial General Intelligence<br />
-                            <span className="text-light-grey">by or before</span> 2027.
-                        </h1>
-                    </div>
-
-                    {/* Right: Info Block */}
-                    <div className="slide19-right">
-                        <div className="slide19-meta-row">
-                            <div className="slide19-icon-pill">
-                                <MapPin size={16} strokeWidth={2.5} />
-                            </div>
-                            <span className="slide19-meta-label">Timeline Projection</span>
+                    <section className="s19-right">
+                        <div className="s19-meta-row">
+                            <div><Rocket size={18} /></div>
+                            <span>Vision startup</span>
                         </div>
-
-                        <h2 className="slide19-date">The 2027 Horizon</h2>
-
-                        <p className="slide19-body-text">
-                            When AI improves AI, the pace of innovation decouples
-                            from human limitations. We are transitioning from AI as
-                            a tool, to a collaborator, and finally to an autonomous
-                            architect of its own evolution.
+                        <h3>Une force de travail numérique locale et sécurisée.</h3>
+                        <p>
+                            aegiLabs veut rendre l'automatisation agentique accessible aux PME marocaines:
+                            des agents déployés, gérés et surveillés par notre équipe, dans les outils déjà utilisés.
                         </p>
-                    </div>
+                        <div className="s19-trust-row">
+                            <ShieldCheck size={20} />
+                            <span>Souveraineté locale, sécurité, monitoring et validation humaine.</span>
+                        </div>
+                    </section>
+                </main>
 
-                </div>
-
-                {/* Bottom Left: Number + Button */}
-                <div className="slide19-bottom-left">
-                    <button className="slide19-circle-btn">
-                        <ArrowUpRight size={20} strokeWidth={2} />
-                    </button>
-                    <button className="slide19-pill-btn">TOOL → ARCHITECT</button>
-                </div>
-
+                <footer className="s19-footer">SECTION 05 — CONCLUSION & VISION</footer>
             </div>
         </div>
     );

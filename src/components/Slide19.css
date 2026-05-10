@@ -1,161 +1,160 @@
 .slide19-card {
     background-color: #f6f6f6 !important;
-    /* Extremely light grey/off-white */
     color: #111111;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
     padding: 0;
 }
 
-/* Top Right Branding */
-.slide19-branding {
+.s19-branding {
     position: absolute;
     top: 6%;
     right: 6%;
-    font-size: 0.55rem;
     color: #888;
-    letter-spacing: 0.05em;
-    font-weight: 500;
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
 }
 
-/* Main Layout */
-.slide19-layout {
-    display: flex;
+.s19-top-left {
+    position: absolute;
+    top: 6%;
+    left: 6%;
+    display: inline-flex;
     align-items: center;
-    /* Center the two columns vertically */
-    padding: 0 8%;
-    gap: 8%;
+    min-height: 38px;
+    padding: 8px 18px;
+    border: 1px solid #d5d5d5;
+    border-radius: 999px;
+    color: #666;
+    background: rgba(255, 255, 255, 0.58);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.s19-footer {
+    position: absolute;
+    left: 6%;
+    bottom: 6%;
+    color: #666;
+    font-size: 0.75rem;
+    font-weight: 850;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.s19-layout {
     height: 100%;
+    display: grid;
+    grid-template-columns: 1.45fr 0.75fr;
+    align-items: center;
+    gap: 7%;
+    padding: 0 8%;
 }
 
-/* Left Column: Big Text */
-.slide19-left {
-    flex: 0 0 62%;
-}
-
-.slide19-big-text {
-    font-family: inherit;
-    font-size: clamp(2.5rem, 4.5vw, 4.5rem);
-    /* Reduced from 5.5vw */
-    font-weight: 500;
-    letter-spacing: -0.04em;
-    /* Relaxed tracking slightly */
-    line-height: 1.05;
-    /* Increased from 0.92 to prevent overlapping */
+.s19-left h2 {
     margin: 0;
-    color: #111;
+    color: #111111;
+    font-size: clamp(2.6rem, 4.7vw, 5rem);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.05em;
 }
 
-.text-light-grey {
+.s19-left h2 span {
     color: #9e9e9e;
-    /* Darker silver to ensure readability against background */
 }
 
-.text-dark {
-    font-weight: 600;
-}
-
-/* Right Column: Info Block */
-.slide19-right {
-    flex: 1;
+.s19-right {
     display: flex;
     flex-direction: column;
     gap: 28px;
-    padding-right: 5%;
 }
 
-.slide19-meta-row {
+.s19-meta-row,
+.s19-trust-row {
     display: flex;
     align-items: center;
     gap: 14px;
 }
 
-.slide19-icon-pill {
-    width: 36px;
-    height: 36px;
-    border-radius: 8px;
-    /* Squircle */
-    background: #e0e0e0;
+.s19-meta-row div {
+    width: 38px;
+    height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
+    background: #e0e0e0;
     color: #333;
 }
 
-.slide19-meta-label {
-    font-size: 0.9rem;
+.s19-meta-row span {
     color: #555;
+    font-size: 0.9rem;
     font-weight: 500;
 }
 
-.slide19-date {
-    font-size: clamp(2.5rem, 3.5vw, 3.5rem);
-    font-weight: 400;
-    /* Regular weight */
-    letter-spacing: -0.04em;
-    color: #111;
+.s19-right h3 {
     margin: 0;
-    line-height: 1.1;
+    color: #111111;
+    font-size: clamp(2.3rem, 3.3vw, 3.4rem);
+    font-weight: 500;
+    line-height: 1.04;
+    letter-spacing: -0.05em;
 }
 
-.slide19-body-text {
-    font-size: clamp(1rem, 1.25vw, 1.25rem);
-    /* Made text larger */
+.s19-right p {
+    margin: 0;
     color: #444;
-    line-height: 1.6;
-    margin: 0;
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
     font-weight: 400;
-    max-width: 95%;
+    line-height: 1.6;
 }
 
-/* Bottom Left: Navigation */
-.slide19-bottom-left {
-    position: absolute;
-    bottom: 8%;
-    left: 8%;
-    display: flex;
-    align-items: center;
-    gap: 16px;
+.s19-trust-row {
+    padding: 16px 18px;
+    border: 1px solid #d0d0d0;
+    border-radius: 22px;
+    color: #555;
+    font-size: 0.86rem;
+    line-height: 1.35;
 }
 
-.slide19-circle-btn {
-    width: 52px;
-    /* Increased size */
-    height: 52px;
-    border-radius: 50%;
-    border: 1px solid #ccc;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #111;
-    cursor: pointer;
-    transition: background 0.2s;
-}
+@media (max-width: 900px) {
+    .slide19-card {
+        overflow-y: auto;
+        padding: 7% 6%;
+    }
 
-.slide19-circle-btn:hover {
-    background: #eaeaea;
-}
+    .s19-branding {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-bottom: 40px;
+    }
 
-.slide19-pill-btn {
-    font-size: 0.8rem;
-    /* Increased text size */
-    font-weight: 600;
-    color: #333;
-    letter-spacing: 0.05em;
-    background: transparent;
-    border: 1px solid #ccc;
-    padding: 14px 28px;
-    /* Bigger tap area */
-    border-radius: 30px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background 0.2s;
-}
+    .s19-top-left,
+    .s19-footer {
+        position: relative;
+        inset: auto;
+    }
 
-.slide19-pill-btn:hover {
-    background: #eaeaea;
+    .s19-top-left {
+        margin-bottom: 18px;
+    }
+
+    .s19-footer {
+        margin-top: 34px;
+    }
+
+    .s19-layout {
+        height: auto;
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
 }
