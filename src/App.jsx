@@ -14,7 +14,9 @@ import Slide12 from './components/Slide12'
 import Slide13 from './components/Slide13'
 import Slide14 from './components/Slide14'
 import Slide15 from './components/Slide15'
+import SlideProjectCanvas from './components/SlideProjectCanvas'
 import Slide16 from './components/Slide16'
+import SlideChannels from './components/SlideChannels'
 import Slide17 from './components/Slide17'
 import Slide18 from './components/Slide18'
 import Slide19 from './components/Slide19'
@@ -23,7 +25,7 @@ import Pagination from './components/Pagination'
 import MobileGate from './components/MobileGate'
 import './index.css'
 
-const TOTAL_SLIDES = 20;
+const TOTAL_SLIDES = 22;
 
 function App() {
   const [activeSlide, setActiveSlide] = useState(1); // Set to 1 as default or user preference
@@ -60,11 +62,13 @@ function App() {
         {activeSlide === 13 && <Slide13 />}
         {activeSlide === 14 && <Slide14 />}
         {activeSlide === 15 && <Slide15 />}
-        {activeSlide === 16 && <Slide16 />}
-        {activeSlide === 17 && <Slide17 />}
-        {activeSlide === 18 && <Slide18 />}
-        {activeSlide === 19 && <Slide19 />}
-        {activeSlide === 20 && <Slide20 />}
+        {activeSlide === 16 && <SlideProjectCanvas />}
+        {activeSlide === 17 && <Slide16 />}
+        {activeSlide === 18 && <SlideChannels />}
+        {activeSlide === 19 && <Slide17 />}
+        {activeSlide === 20 && <Slide18 />}
+        {activeSlide === 21 && <Slide19 />}
+        {activeSlide === 22 && <Slide20 />}
         <Pagination
           activeSlide={activeSlide}
           totalSlides={TOTAL_SLIDES}

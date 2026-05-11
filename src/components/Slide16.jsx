@@ -22,8 +22,8 @@ const Slide16 = () => {
                 <div className="s16-info">
                     <p className="branding-text">aegiLabs — SECTION 04</p>
                     <p className="small-description">
-                        Frais d'intégration,<br />
-                        abonnement mensuel<br />
+                        Canaux d'acquisition,<br />
+                        revenus récurrents<br />
                         et extension par usage.
                     </p>
                 </div>
