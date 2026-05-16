@@ -22,7 +22,7 @@ const Slide16 = () => {
                 <div className="s16-info">
                     <p className="branding-text">aegiLabs — SECTION 04</p>
                     <p className="small-description">
-                        Canaux d'acquisition,<br />
+                        Canaux, politique de prix,<br />
                         revenus récurrents<br />
                         et extension par usage.
                     </p>

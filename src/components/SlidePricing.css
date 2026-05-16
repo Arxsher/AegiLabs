@@ -1,0 +1,263 @@
+.pricing-card {
+    padding: 4.5% 5% 4%;
+    display: flex;
+    flex-direction: column;
+    background:
+        radial-gradient(circle at 82% 18%, rgba(26, 26, 26, 0.08), transparent 24%),
+        linear-gradient(135deg, #fafafa 0%, #f5f5f2 58%, #ededeb 100%);
+    color: #151515;
+}
+
+.pricing-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.pricing-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 8px 18px;
+    border: 1px solid #d5d5d5;
+    border-radius: 999px;
+    color: #666;
+    background: rgba(255, 255, 255, 0.58);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.pricing-stage {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.18fr 0.82fr;
+    grid-template-rows: 1fr 0.72fr;
+    gap: 18px;
+    min-height: 0;
+}
+
+.pricing-question-card,
+.pricing-logic-card,
+.pricing-factor {
+    border: 1px solid rgba(26, 26, 26, 0.1);
+    border-radius: 26px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+}
+
+.pricing-question-card {
+    position: relative;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 38px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.pricing-watermark {
+    position: absolute;
+    right: -3%;
+    top: -4%;
+    color: rgba(26, 26, 26, 0.045);
+    font-size: clamp(8rem, 17vw, 18rem);
+    font-weight: 750;
+    line-height: 0.8;
+    letter-spacing: -0.1em;
+    pointer-events: none;
+}
+
+.pricing-question-card span,
+.pricing-logic-card span {
+    color: #777;
+    font-size: 0.75rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.pricing-question-card h2 {
+    position: relative;
+    max-width: 940px;
+    margin: 28px 0 24px;
+    color: #111111;
+    font-size: clamp(3.4rem, 6.3vw, 7.3rem);
+    font-weight: 650;
+    line-height: 0.86;
+    letter-spacing: -0.08em;
+}
+
+.pricing-question-card p {
+    position: relative;
+    max-width: 760px;
+    margin: 0;
+    color: #666;
+    font-size: clamp(1rem, 1.14vw, 1.22rem);
+    font-weight: 500;
+    line-height: 1.48;
+    letter-spacing: -0.02em;
+}
+
+.pricing-logic-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 28px;
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+.pricing-logic-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #1a1a1a;
+    margin-bottom: auto;
+}
+
+.pricing-logic-card span {
+    color: #cfcfcf;
+    margin-top: 30px;
+}
+
+.pricing-logic-card h3 {
+    margin: 16px 0 18px;
+    color: #ffffff;
+    font-size: clamp(2rem, 3vw, 3.55rem);
+    font-weight: 650;
+    line-height: 0.92;
+    letter-spacing: -0.07em;
+}
+
+.pricing-equation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.pricing-equation strong {
+    color: #ffffff;
+    font-size: clamp(0.8rem, 0.9vw, 0.98rem);
+    font-weight: 750;
+    line-height: 1.1;
+}
+
+.pricing-equation span {
+    color: #ff2a2a;
+    font-size: 1.6rem;
+    line-height: 1;
+    margin: 0;
+}
+
+.pricing-logic-card p {
+    margin: 14px 0 0;
+    color: #d8d8d8;
+    font-size: clamp(0.78rem, 0.88vw, 0.96rem);
+    font-weight: 500;
+    line-height: 1.38;
+}
+
+.pricing-factor-stack {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.pricing-factor {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 0;
+    background: rgba(255, 255, 255, 0.62);
+}
+
+.pricing-factor-num {
+    padding: 18px 18px 0;
+    color: #888;
+    font-size: clamp(1.65rem, 2.45vw, 2.85rem);
+    font-weight: 650;
+    line-height: 1;
+    letter-spacing: -0.06em;
+}
+
+.pricing-factor-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 18px;
+}
+
+.pricing-factor-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #eeeeee;
+    color: #1a1a1a;
+    margin-bottom: 24px;
+}
+
+.pricing-factor h3 {
+    margin: 0 0 7px;
+    color: #1a1a1a;
+    font-size: clamp(1.05rem, 1.32vw, 1.5rem);
+    font-weight: 650;
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+.pricing-factor p {
+    margin: 0;
+    color: #666;
+    font-size: clamp(0.7rem, 0.8vw, 0.88rem);
+    font-weight: 500;
+    line-height: 1.34;
+}
+
+.pricing-footer {
+    align-self: flex-end;
+    padding-top: 18px;
+    color: #666;
+    font-size: 0.75rem;
+    font-weight: 850;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+    .pricing-card {
+        padding: 7% 6%;
+        overflow-y: auto;
+    }
+
+    .pricing-topbar {
+        flex-wrap: wrap;
+    }
+
+    .pricing-pill {
+        white-space: normal;
+    }
+
+    .pricing-stage,
+    .pricing-factor-stack {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+    }
+
+    .pricing-question-card {
+        grid-row: auto;
+    }
+}
